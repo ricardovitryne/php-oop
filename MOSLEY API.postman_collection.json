@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "99a4d039-0143-4ea4-b9cc-c6a76d6e434d",
+		"name": "PHP API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15544524"
+	},
+	"item": [
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"ricardo@vitrynedigital.com.br\",\n    \"password\" : \"AAA111QQQ\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://php-oop.crud/login",
+							"protocol": "http",
+							"host": [
+								"php-oop",
+								"crud"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGOFF",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "TOKEN",
+								"value": "af1d77ba49714e8340612d689ae4cccf8262c27b",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://php-oop.crud/logoff",
+							"protocol": "http",
+							"host": [
+								"php-oop",
+								"crud"
+							],
+							"path": [
+								"logoff"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "STORE USER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TOKEN",
+						"value": "34bf40b63a3db5c35291ce8ac4244df4800dc56b",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Ricardo Goncalves\",\n    \"email\": \"ricardo@vitrynedigital.com.br\",\n    \"password\": \"AAA111QQQ\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://php-oop.crud/users/",
+					"protocol": "http",
+					"host": [
+						"php-oop",
+						"crud"
+					],
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LIST USERS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "TOKEN",
+						"value": "4bac6b522fe91b4c9e777c671de5ea15ea4d3e75",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://php-oop.crud/users/?page=1",
+					"protocol": "http",
+					"host": [
+						"php-oop",
+						"crud"
+					],
+					"path": [
+						"users",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SHOW USER",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "TOKEN",
+						"value": "9fd4b2a2448b81ebcdc4fa4baf7a2c1b2c27c014",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://php-oop.crud/users/30",
+					"protocol": "http",
+					"host": [
+						"php-oop",
+						"crud"
+					],
+					"path": [
+						"users",
+						"30"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EDIT USER",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "TOKEN",
+						"value": "9fd4b2a2448b81ebcdc4fa4baf7a2c1b2c27c014",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Ricardo Goncalves Lima\",\n    \"email\": \"ricardo@vitrynedigital.com.br\",\n    \"password\": \"AAAAAAA\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://php-oop.crud/users/30",
+					"protocol": "http",
+					"host": [
+						"php-oop",
+						"crud"
+					],
+					"path": [
+						"users",
+						"30"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD DRINK",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "TOKEN",
+						"value": "4bac6b522fe91b4c9e777c671de5ea15ea4d3e75",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"drink\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://php-oop.crud/users/31/drink",
+					"protocol": "http",
+					"host": [
+						"php-oop",
+						"crud"
+					],
+					"path": [
+						"users",
+						"31",
+						"drink"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE USER",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "TOKEN",
+						"value": "9fd4b2a2448b81ebcdc4fa4baf7a2c1b2c27c014",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://php-oop.crud/users/30",
+					"protocol": "http",
+					"host": [
+						"php-oop",
+						"crud"
+					],
+					"path": [
+						"users",
+						"30"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
