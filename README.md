@@ -1,6 +1,6 @@
 SIMPLE API WITH PHP OOP
 
-IMPORTANT INFOS:
+INFOS:
 
 1 - THE PROJECT ITSELF IS IN THE APP FOLDER
 
@@ -27,4 +27,5 @@ CONFIGURATION
     location / {
         try_files $uri $uri/ /index.php?$query_string;
   }
+- 
 - OPTIONALLY CONFIGURE VHOST WITH ADDRESS http://php-oop.crud
